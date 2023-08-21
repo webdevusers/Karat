@@ -501,6 +501,7 @@
         })
     </script>
     <!-- Popup -->
+    <script src="./libs/maskedinput.js"></script>
     <script>
         $('#open').on('click', () => {
             $('#modal-window').css('display', 'block');
@@ -526,34 +527,7 @@
             $('.header').css('filter', 'unset')
             $('.footer').css('filter', 'blur(0px)')
         })
-        $(document).ready(function () {
-            const phonePattern = /^\(\d{3}\)\s\d{3}\s\d{2}\s\d{2}$/;
-
-            $('#phone').on('input', function (e) {
-                if (e.inputType === 'deleteContentBackward' && /\s\(/.test($(this).val())) {
-                    const newValue = $(this).val().replace(/\s\(\d?$/, '');
-                    $(this).val(newValue);
-                    return;
-                }
-
-                const rawValue = $(this).val().replace(/\D/g, '');
-                let formattedValue = '';
-
-                for (let i = 0; i < rawValue.length && i < 10; i++) {
-                    if (i === 0) {
-                        formattedValue += `(${rawValue[i]}`;
-                    } else if (i === 3) {
-                        formattedValue += `) ${rawValue[i]}`;
-                    } else if (i === 6 || i === 8) {
-                        formattedValue += ` ${rawValue[i]}`;
-                    } else {
-                        formattedValue += rawValue[i];
-                    }
-                }
-
-                $(this).val(formattedValue);
-            });
-        });
+        $("#phone").mask("+99 (999) 999-9999");
     </script>
     <script src="./script/burger.js"></script>
 </body>
