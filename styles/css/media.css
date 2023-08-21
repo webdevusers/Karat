@@ -250,7 +250,9 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-
+  .footer__socials a img {
+    width: 26px;
+  }
   .footer__col {
     margin-top: 10px;
   }

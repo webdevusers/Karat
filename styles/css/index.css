@@ -2807,7 +2807,11 @@ a {
   justify-content: space-between;
   gap: 30px;
 }
-
+@media (max-width: 768px) {
+  .product__characteristics {
+    gap: 0px;
+  }
+}
 .product__characteristics-text__title {
   font-family: Montserrat;
   font-size: 24px;
@@ -2817,6 +2821,9 @@ a {
   color: #161616;
   margin-bottom: 20px;
   text-align: left;
+}
+.product__characteristics-text__title span {
+  width: 250px;
 }
 
 .product__characteristics-text__desc {
@@ -3032,7 +3039,7 @@ a {
   }
 
   .product__characteristics-text__title svg {
-    margin-left: 130px;
+    margin-left: 0px;
   }
 
   .product__characteristics-text__desc {
@@ -3434,4 +3441,15 @@ a {
     padding: 14px 50px;
   }
 
+}
+body {
+  background-image: url('../../assets/img/png/background.jpg');
+  background-repeat: repeat;
+}
+.product__box-images__slider {
+  position: relative;
+}
+.product__box-images__slider .swiper-button-prev {
+  rotate: 180deg;
+  left: -7% !important;
 }

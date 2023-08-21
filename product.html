@@ -33,12 +33,16 @@
         @media (max-width: 710px) {
             .product__box-images-slider .swiper-button-prev {
                 rotate: 180deg !important;
-                left: 7% !important;
+                left: -7% !important;
                 transform: translate(-50%);
             }
 
             .product__box-images__main img {
                 min-width: 200px;
+            }
+
+            .product .swiper-wrapper .swiper-slide {
+                width: unset !important;
             }
         }
     </style>
@@ -122,47 +126,49 @@
                     <div class="product__box-images__main">
                         <img src="./assets/img/png/gallery/img-1.png" alt="" id="main-img">
                     </div>
-                    <div class="swiper product__box-images-slider" style="height: 500px;">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a class="image-link" href="./assets/img/png/product/img-1.png" id="#default-image">
-                                    <img src="./assets/img/png/product/img-1.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="./assets/img/png/product/img-2.png" class="image-link">
-                                    <img src="./assets/img/png/product/img-2.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="./assets/img/png/product/img-3.png" class="image-link">
-                                    <img src="./assets/img/png/product/img-3.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="./assets/img/png/product/img-4.png" class="image-link">
-                                    <img src="./assets/img/png/product/img-4.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="./assets/img/png/product/img-5.png" class="image-link">
-                                    <img src="./assets/img/png/product/img-5.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="./assets/img/png/product/img-4.png" class="image-link">
-                                    <img src="./assets/img/png/product/img-4.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="./assets/img/png/product/img-3.png" class="image-link">
-                                    <img src="./assets/img/png/product/img-3.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="./assets/img/png/product/img-2.png" class="image-link">
-                                    <img src="./assets/img/png/product/img-2.png" alt="">
-                                </a>
+                    <div class="product__box-images__slider">
+                        <div class="swiper product__box-images-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a class="image-link" href="./assets/img/png/product/img-1.png" id="#default-image">
+                                        <img src="./assets/img/png/product/img-1.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="./assets/img/png/product/img-2.png" class="image-link">
+                                        <img src="./assets/img/png/product/img-2.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="./assets/img/png/product/img-3.png" class="image-link">
+                                        <img src="./assets/img/png/product/img-3.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="./assets/img/png/product/img-4.png" class="image-link">
+                                        <img src="./assets/img/png/product/img-4.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="./assets/img/png/product/img-5.png" class="image-link">
+                                        <img src="./assets/img/png/product/img-5.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="./assets/img/png/product/img-4.png" class="image-link">
+                                        <img src="./assets/img/png/product/img-4.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="./assets/img/png/product/img-3.png" class="image-link">
+                                        <img src="./assets/img/png/product/img-3.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="./assets/img/png/product/img-2.png" class="image-link">
+                                        <img src="./assets/img/png/product/img-2.png" alt="">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-button-next"></div>
@@ -263,9 +269,11 @@
                                             fill="#161616" />
                                     </svg>
                                 </div>
-                                <div class="product__box-order__text-call__text">
-                                    +38 067 111 11 11
-                                </div>
+                                <a href="tel:+38 067 111 11 11">
+                                    <div class="product__box-order__text-call__text">
+                                        +38 067 111 11 11
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -323,9 +331,9 @@
             <p>Отримати безкоштовну консультацію</p>
             <form action="">
                 <label for="">Ім’я <span>*</span></label>
-                <input type="text" placeholder="Іван" required>
+                <input type="text" id="name" placeholder="Іван" required>
                 <label for="">Номер телефону <span>*</span></label>
-                <input type="tel" placeholder="+38 (066) 111 11 11" required>
+                <input type="tel" id="phone" placeholder="+38 (066) 111 11 11" required>
                 <label for="">Коментар</label>
                 <textarea name="" id="" cols="30" rows="1" placeholder="Введіть ваш коментар"></textarea>
                 <button class="btn" id="open__succeffuly">Замовити дзвінок</button>
@@ -425,7 +433,7 @@
                 1601: {
                     direction: 'vertical',
                     slidesPerView: 5,
-                    spaceBetween: 0
+                    spaceBetween: 45
                 },
                 1600: {
                     direction: 'horizontal',
@@ -454,13 +462,13 @@
                 413: {
                     direction: 'vertical',
                     slidesPerView: 3,
-                    spaceBetween: 0,
+                    spaceBetween: 25,
                     loop: true,
                 },
                 0: {
                     direction: 'vertical',
                     slidesPerView: 2,
-                    spaceBetween: 10,
+                    spaceBetween: 25,
                     loop: true,
                 },
             },
@@ -504,20 +512,48 @@
             $('#modal-window').css('display', 'none');
             $('#modal-window-OK').css('display', 'block');
         })
-        $('#contact_close').on('click', ()=> {
+        $('#contact_close').on('click', () => {
             $('#modal-window').css('display', 'none')
             $('#modal-window-OK').css('display', 'none')
             $('#blur').css('filter', 'blur(0px)');
             $('.header').css('filter', 'blur(0px)')
             $('.footer').css('filter', 'blur(0px)')
         })
-        $('#contact_close2').on('click', ()=> {
+        $('#contact_close2').on('click', () => {
             $('#modal-window').css('display', 'none')
             $('#modal-window-OK').css('display', 'none')
             $('#blur').css('filter', 'blur(0px)');
             $('.header').css('filter', 'unset')
             $('.footer').css('filter', 'blur(0px)')
         })
+        $(document).ready(function () {
+            const phonePattern = /^\(\d{3}\)\s\d{3}\s\d{2}\s\d{2}$/;
+
+            $('#phone').on('input', function (e) {
+                if (e.inputType === 'deleteContentBackward' && /\s\(/.test($(this).val())) {
+                    const newValue = $(this).val().replace(/\s\(\d?$/, '');
+                    $(this).val(newValue);
+                    return;
+                }
+
+                const rawValue = $(this).val().replace(/\D/g, '');
+                let formattedValue = '';
+
+                for (let i = 0; i < rawValue.length && i < 10; i++) {
+                    if (i === 0) {
+                        formattedValue += `(${rawValue[i]}`;
+                    } else if (i === 3) {
+                        formattedValue += `) ${rawValue[i]}`;
+                    } else if (i === 6 || i === 8) {
+                        formattedValue += ` ${rawValue[i]}`;
+                    } else {
+                        formattedValue += rawValue[i];
+                    }
+                }
+
+                $(this).val(formattedValue);
+            });
+        });
     </script>
     <script src="./script/burger.js"></script>
 </body>
