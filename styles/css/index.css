@@ -2585,6 +2585,7 @@ a {
   position: absolute;
 }
 
+
 .modal-active {
   -webkit-filter: blur(10px);
   filter: blur(10px);
@@ -2600,6 +2601,13 @@ a {
 
 .policy__wrap {
   margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 1040px) {
+  .policy__wrap {
+    margin-bottom: 0;
+  }
 }
 
 .product__box {
@@ -2788,9 +2796,13 @@ a {
 }
 
 .product__box-images .swiper-slide {
-  max-width: 100px;
+  max-width: 120px;
+  height: 120px;
 }
-
+.product__box-images .swiper-slide .swiper-slide-active {
+  border: 5px solid #DCDCDC !important;
+  padding: 10px;
+}
 .product__characteristics {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2807,11 +2819,13 @@ a {
   justify-content: space-between;
   gap: 30px;
 }
+
 @media (max-width: 768px) {
   .product__characteristics {
     gap: 0px;
   }
 }
+
 .product__characteristics-text__title {
   font-family: Montserrat;
   font-size: 24px;
@@ -2822,6 +2836,7 @@ a {
   margin-bottom: 20px;
   text-align: left;
 }
+
 .product__characteristics-text__title span {
   width: 250px;
 }
@@ -3442,13 +3457,18 @@ a {
   }
 
 }
-body,html {
+
+body,
+html {
   background-image: url('../../assets/img/png/Background\ 2x.jpg');
   background-repeat: repeat;
   background-size: cover;
 }
+
 @media (max-width: 767px) {
-  body,html {
+
+  body,
+  html {
     background-image: url('../../assets/img/png/background.jpg');
     background-repeat: repeat;
     background-size: cover;
@@ -3460,21 +3480,25 @@ body,html {
 .product__box-images__slider {
   position: relative;
 }
+
 @media (max-width: 570px) {
   .product__box-images__slider .swiper-button-prev {
     rotate: 180deg;
     left: -7% !important;
     top: 4% !important;
   }
+
   .product__box-images__slider .swiper-button-next {
     top: 96% !important;
     left: 50% !important;
     transform: translateX(-50%);
   }
 }
+
 .product__box-images__slider .swiper-button-next {
   top: 100% !important;
 }
+
 .product__box-images__slider .swiper-button-prev {
   top: 0% !important;
 }
